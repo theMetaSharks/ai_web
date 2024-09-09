@@ -1,0 +1,273 @@
+
+@import '../../assets/scss/theme.scss';
+
+:host {
+    display: block;
+}
+
+.navbar-light {
+    &.mynavbar {
+        background-color: transparent !important;
+        border-bottom: 1px solid transparent;
+        // box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;        
+        @media (max-width: 1199px) {
+            background-color: $text-white !important;
+        }
+        .navbar-brand {
+            padding-top: 0.18rem;
+            padding-bottom: 0.18rem;
+        }
+        .nav-item {
+            margin: 0 20px;
+            .nav-link {
+                color: $text-black;
+                font-size: clamp(14px, 2.0vw, 18px);
+                font-weight: 400;
+                position: relative;
+                cursor: pointer;
+                padding-top: 0.657rem;
+                padding-bottom: 0.657rem;
+                span {
+                    position: relative;
+                    &::after {
+                        content: '';
+                        border-bottom: 1px solid $text-color;
+                        position: absolute;
+                        bottom: -8px;
+                        display: block;   
+                        left: 0;                         
+                        right: 0;
+                        width: 0%;
+                        margin: 0 auto;
+                        transition: width 0.3s linear;
+                        transform-origin: center;
+                    }
+                }
+                &.active, &:focus,
+                &:hover {
+                    color: $primary-color;
+                    span {
+                        position: relative;
+                        &::after {                          
+                            width: 50%;
+                            transform-origin: center;
+                        }
+                    }
+                }
+            }
+        }
+        .form-inline {
+            max-width: 35%;
+            width: calc(35% - 40px);
+            margin: 0px 15px;
+            .input-group {
+                background-color: $text-white;
+                border-radius: 5px;
+                width: 100%;
+                border: 1px solid transparent;
+                .form-control {
+                    background-color: transparent;
+                    border-color: transparent;
+                    border-radius: 5px 0 0 50px;
+                    color: $text-black;
+                    font-size: 14px;
+                    height: 38px;
+                    border-right: 0px;
+                    box-shadow: none;
+                    outline: none;
+                    &::placeholder {
+                        color: #B1B4B2;
+                    }
+                }
+                .input-group-text {
+                    background-color: transparent;
+                    border-color: transparent;
+                    border-left: 0px;
+                    border-radius: 0px 30px 30px 0px;
+                }
+                &:focus-within {
+                    border-color: $primary-color;
+                }
+            }
+        }
+    }
+    .navbar-text {
+        padding: 0.25rem 0;
+    }
+    .navbar-toggler {
+        border: none;
+        background: transparent !important;
+    }
+    .navbar-toggler:hover {
+        background: transparent !important;
+    }
+    .navbar-toggler .icon-bar {
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: block;
+        margin-bottom: 4px;
+        transition: all 0.2s;
+    }
+    .navbar-toggler .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+    .navbar-toggler .middle-bar {
+        opacity: 0;
+    }
+    .navbar-toggler .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+    .navbar-toggler.collapsed .top-bar {
+        transform: rotate(0);
+    }
+    .navbar-toggler.collapsed .middle-bar {
+        opacity: 1;
+    }
+    .navbar-toggler.collapsed .bottom-bar {
+        transform: rotate(0);
+    }
+}
+
+.button-primary.buttonheader {
+    background: linear-gradient(135deg, $primary-color, #0056d2); /* Gradient using your primary color */
+    color: $text-white !important; /* Ensure white text */
+    border: none; /* Remove default borders */
+    border-radius: 10px; /* Softer, modern corner */
+    font-weight: 600; /* Slightly bolder for emphasis */
+    font-size: 18px; /* Slightly larger font */
+    padding: 8px 24px; /* Better padding for a modern, spacious look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease-in-out; /* Faster transition for responsiveness */
+    width: auto; /* Automatic width adjustment */
+    margin-left: 10px;
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.button-primary.buttonheader:hover {
+    background: linear-gradient(135deg, #0056d2, $primary-color); /* Swap the gradient direction */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Elevation increase on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+.button-primary.buttonheader:active {
+    transform: scale(1); /* Reset scale when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight reduction in shadow */
+}
+
+
+
+header{
+    &.navbgset{
+        .mynavbar{
+            background-color: $text-white !important;
+            animation: tophead 0.3s forwards linear;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+@keyframes tophead {
+    from{
+        transform: translateY(-70px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+
+
+.smClose {
+    width: 40px;
+    height: 40px;
+    z-index: 9999999;
+    overflow: hidden;
+    margin-left: 12px;
+    display: inline-block;
+    vertical-align: middle;
+ }
+ 
+ .closeicon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transform: scale(2) translate(0px, -1px);
+    position: relative;
+ }
+ 
+ .closeicon path {
+    fill: none;
+    -webkit-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+    -moz-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+    -o-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+    -ms-transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+    transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+    stroke-width: 20px;
+    stroke-linecap: round;
+    stroke: #000000;
+    stroke-dashoffset: 0px;
+ }
+ 
+ .closeicon path.top,
+ .closeicon path.bottom {
+    stroke-dasharray: 240px 950px;
+ }
+ 
+ .closeicon path.middle {
+    stroke-dasharray: 240px 238px;
+ }
+ 
+ .smClose.active .closeicon path.top,
+ .smClose.active .closeicon path.bottom {
+    stroke-dashoffset: -650px;
+    stroke-dashoffset: -650px;
+ }
+ 
+ .smClose.active .closeicon path.middle {
+    stroke-dashoffset: -115px;
+    stroke-dasharray: 1px 220px;
+ }
+ 
+ .menucollapse{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+ }
+
+ @media (max-width: 1199px) {
+    .menucollapse {
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        transform: translateX(-300px);
+        width: 280px;
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        background-color: #fff;
+        height: calc(100vh - 70px);
+        box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
+        padding: 0px 15px;
+    }
+    .menucollapse.show{
+        transform: translateX(0px);
+    }
+ }
+
+ .custom-dropdownmenu{
+    ul{
+        list-style: none;
+        padding: 0;
+        font-size: 18px;        
+    }
+ }

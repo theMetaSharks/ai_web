@@ -1,0 +1,140 @@
+.roadmapBannerCnt{
+margin-top: 50px;
+ @media (min-width: 991px) {
+    display: flex;
+    min-height: 377px;
+    justify-content: end;
+    flex-direction: column;
+    margin-top: 0;
+ }
+}
+.roadmapBanner{
+    position: absolute;
+    top: 0;
+    right: 0;   
+    @media (max-width: 767px) {
+        display: none;
+    } 
+}
+.roadmapSection {
+    .roadmapListMain {   
+        position: relative;
+        &::before{
+            content: '';
+            height: 96%;
+            width: 4px;
+            background-color: $light-bg;
+            position: absolute;
+            left: 38.5%;
+            bottom: 0;
+            top: 0;
+            transform: translateX(-50%);
+            @media (max-width: 991px) {
+                margin: 15px 0px 100px;
+                width: 15px;
+                height: calc(100% - 20px);
+                clip-path: polygon(0 0, 100% 0%, 100% 99.85%, 50% 100%, 0 99.85%);
+                // clip-path: polygon(0% 0%, 96% 0, 100% 50%, 96% 100%, 0% 100%);
+                background: linear-gradient(to bottom, rgba(150, 73, 253, 0.07) 4.98%, #9649FD 100%);
+                border-radius: 15px 15px 0px 0px;
+                position: absolute;
+                left: 0%;
+                bottom: 0;
+                top: 0;
+                transform: translateX(0%);
+            }
+        } 
+
+        .roadmaplist {
+            margin-bottom: 70px;
+            @media (max-width: 991px) {margin-bottom: 40px; margin-left: 40px;}
+            .rm-quater {
+                font-size: clamp(20px, 2.33vw, 34px);
+                font-weight: 400;
+                line-height: clamp(42px, 4.85vw, 58.22px);
+                margin-bottom: 8px;
+            }
+            .rm-duration {                
+                font-size: clamp(20px, 2.33vw, 34px);
+                font-weight: 700;
+                line-height: clamp(30px, 4.04vw, 48.52px);
+                margin-bottom: 10px;
+            }
+            .rm-dept {
+                font-size: clamp(20px, 2.33vw, 34px);
+                font-weight: 700;
+                line-height: clamp(30px, 4.04vw, 48.52px);
+                color: var(--primary);
+                margin-bottom: 10px;
+            }
+            .rm-arrow {
+                margin: 35px 0px;
+                width: 100%;
+                height: 30px;
+                clip-path: polygon(0% 0%, 96% 0, 100% 50%, 96% 100%, 0% 100%);
+                background: linear-gradient(-270deg, rgba(150, 73, 253, 0.07) 4.98%, #9649FD 100%);
+                border-radius: 15px 0 0 15px;
+                @media (max-width: 991px) {
+                    margin: 15px 0px;                    
+                    height: 15px;
+                    display: none;
+                    // position: absolute;
+                    // top: calc(50% + 40px);
+                    // transform: rotate(90deg);
+                    // left: calc(-50% + -15px);
+                 }
+            }
+
+            .rm-listmain {
+                ul {
+                    list-style-type: disc;
+                    padding-inline-start: 20px;
+                    li {
+                        font-size: clamp(15px, 1.6vw, 17px);
+                        font-weight: 400;
+                            line-height: clamp(22px, 2.58vw, 31px);
+                            text-align: left;
+                    }
+                }
+            }
+
+            .rm-rightmainbx {
+                background: $light-bg;
+                border: 1px solid #EBDCFF;
+                box-shadow: 0px 0px 10px 0px #EBDCFF;
+                padding: 30px 24px;
+                border-radius: 15px;
+                @media (max-width: 767px) {
+                    padding: 20px 15px;
+                }
+                .rmcard {
+                    border-radius: 15px;
+                    padding: 35px 25px;
+                    background: var(--text-white);
+                    border: 1px solid #DEDEDE;
+                    @media (max-width: 767px) {
+                        padding: 20px 15px;
+                    }
+                    .rmcard-tit {                        
+                        font-size: clamp(16px, 1.67vw, 18px);
+                        font-weight: 700;
+                        line-height: clamp(18px, 2.00vw, 24px);
+                        text-align: left;
+                    }
+                    .rmcard-list {                        
+                        ul {
+                            list-style-type: disc;
+                            padding-inline-start: 20px;
+                            li {
+                                font-size: clamp(15px, 1.6vw, 17px);
+                                font-weight: 400;
+                                line-height: clamp(18px, 2.00vw, 24px);
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

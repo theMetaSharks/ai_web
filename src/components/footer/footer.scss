@@ -1,0 +1,116 @@
+@import '../../assets/scss/theme.scss';
+
+.footer{
+    background-color: $text-black;
+    padding: 60px 0px 0px;
+}
+.footerpara
+{
+font-size: 15px;
+font-weight: 400;
+line-height: 28px;
+color: rgba($color: #ffffff, $alpha: 0.5);
+}
+.footerListTitle{
+font-size: 18px;
+font-weight: 500;
+line-height: 59px;
+color: $text-white;
+margin-bottom: 5px;
+font-weight: $secondary-font;
+}
+.footerList {
+    margin-bottom: 0px;    
+    list-style-type: disc;
+    padding-inline-start: 16px;
+    font-weight: $secondary-font;
+    li {
+        margin-bottom: 10px;        
+        color: rgba($color: #ffffff, $alpha: 0.5);
+        a {
+            color: rgba($color: #ffffff, $alpha: 0.5);
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;            
+            &:hover {
+                font-weight: 500;
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.formfooterInput{
+    .input-group{
+        background-color: transparent;
+        border: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+        border-radius: 5px;
+        input.form-control{
+            font-size: 15px;
+            font-weight: 400;
+            color: $text-white;
+            background-color: transparent;
+            border: 0;
+            height: 43px;
+        }
+        .btn-secondary{
+            background-color: #D9D9D9;
+            font-size: 16px;
+            font-weight: 400;
+            color: $text-black;
+            &:hover{
+                background-color: $text-white;
+            }
+        }
+    }
+}
+
+.secondfooter{
+    margin-top: 70px;
+    border-top: 1px solid rgba($color: #ffffff, $alpha: 0.1);
+    color: #CACACA;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 15px 15px 48px;
+    text-align: center;
+}
+
+.SocialMediaList
+{
+    ul 
+    {
+        gap: 25px;	
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 0;
+            li{
+            a{
+                transition: all 0.3s linear;
+                display: inline-block;
+            }
+            }
+            &:hover {
+            > li {
+                a {
+                    opacity: 0.4;
+                    transform: scale(1);
+                }
+            }
+        }
+        > li {
+            a {
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+.supportTxt{
+    font-size: 18px;
+    font-weight: 400;
+    color: $text-white;
+    line-height: 59px;
+}

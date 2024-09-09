@@ -1,0 +1,114 @@
+.mymodal {
+    .modal-content {
+        background: #FBF8FF;
+        border: 1px solid #EBDCFF;
+        box-shadow: 0px 0px 10px 0px #EBDCFF;
+        position: relative;
+        padding: 50px 40px;
+        border-radius: 15px;
+
+        .modal-header {
+            padding: 0 0 8px;
+            border-bottom: 0px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .modal-body {
+            border: 1px solid #DEDEDE;
+            background-color: $text-white;
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        .modal-title {
+            font-family: var(--heroslegent);
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .close {
+            font-size: 30px;
+            font-weight: 700;
+            color: #B0B0B0;
+            opacity: 1;
+            text-shadow: none;
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            padding: 0;
+            &:hover {
+                opacity: 1;
+                color: var(--text-color);
+            }
+        }
+    }
+}
+
+.modal-backdrop.show {
+    backdrop-filter: blur(15px);
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.walletLink {
+    padding: 15px 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s linear;
+    margin-bottom: 10px;
+
+    .walletTit {
+        font-size: 21px;
+        font-weight: 700;
+        color: $text-black;
+        background-color: transparent;
+        padding: 5px 10px;
+        transition: all 0.3s linear;
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        .walletTit {
+            background-color: $light-bg;
+            color: $text-black;
+        }
+        // box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+}
+
+.borderleftwallet {
+    border-left: 1px solid rgba(0, 0, 0, 0.7);
+
+    @media (max-width: 767px) {
+        border-left: 0px;
+        border-top: 1px solid rgba(0, 0, 0, 0.7);
+    }
+}
+
+.connectWalletModal {
+    max-width: 575px;
+}
+
+
+    .stepTit {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 31px;
+        text-align: left;
+        margin-bottom: 45px;
+    }
+
+    .stepNo {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 31px;
+    }
+
+    .step-desc {
+        font-size: 14px;
+        font-weight: 400;
+        // line-height: 31px;
+        text-align: left;
+    }

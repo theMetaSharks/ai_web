@@ -1,0 +1,173 @@
+
+.blog-lightbgsection{
+    padding: 45px 15px 60px;
+    background-color: $light-bg;
+    @media (max-width: 767px) {
+        padding: 25px 15px 30px;
+    }
+}
+.b-secTitle {
+    font-size: clamp(20px, 2.32vw, 34px);
+    font-weight: 700;
+    line-height: clamp(30px, 4.04vw, 48.52px);
+    margin-bottom: 25px;
+}
+
+.Newscard{    
+    border: 1px solid $light-bg;
+    box-shadow: 0px 0px 3px 0px $primary-color;
+    background-color: $text-white;
+    padding: 25px;
+    border-radius: 15px;
+    @media (max-width: 767px) {
+        padding: 15px;
+    }
+    .cardImg{
+        min-height: 215px;
+        margin-bottom: 20px;
+        img{
+            width: 100%;
+            min-height: 215px;
+            border-radius: 15px;
+        }
+    }
+    .cardCnt{       
+        .cardtit{
+            font-size: clamp(14px, 2.67vw, 20px);
+            font-weight: 700;
+            line-height: clamp(32px, 3.23vw, 38.82px);
+            text-align: left;
+            color: var(--text-color);
+        }
+        
+    }
+    &:hover{
+        background-color: $light-bg;
+    }
+}
+
+.newspostCard{
+    box-shadow: 0px 0px 10px 0px #EBDCFF;
+    background: $light-bg;
+    border: 1px solid #EBDCFF;
+    padding: 60px 48px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    .np-img{
+        position: relative;
+        margin-right: 38px;
+        img{
+            min-width: 326px;
+            max-width: 326px;
+            // min-height: 253px;
+            // max-height: 253px;
+            border-radius: 15px;
+            @media (max-width: 525px) {
+                min-width: 100%;
+                max-width: 100%;
+            }
+        }
+        .np-label {
+            position: absolute;
+            top: 12px;
+            right: 8px;
+        .label{
+            font-size: clamp(14px, 1.33vw, 16px);
+            font-weight: 700;
+            line-height: clamp(16px, 1.62vw, 19.41px);
+            text-align: left;
+            border-radius: 15px;
+            padding: 9px 30px;
+            min-width: 103px;
+            color: $text-color;
+            display: inline-block;
+            &.newsLabel{
+                background: #FAD385;                
+            }
+            &.eventLabel{
+                background: #FBF8FF;
+            }
+            &.guideLabel{
+                background: #8D8D8D;
+                color: $text-white;
+            }
+        }
+        }
+    }    
+    .np-title{
+        font-size: clamp(16px, 2.32vw, 24px);
+        font-weight: 400;
+        line-height: clamp(30px, 4.04vw, 48.52px);
+        text-align: left;       
+        margin-bottom: 5px; 
+    }
+    .np-para{
+        font-size: clamp(12px, 2.32vw, 16px);
+        font-weight: 300;
+        line-height: clamp(25px, 2.58vw, 31px);
+        text-align: left;    
+        margin-bottom: 25px;     
+    }
+    .np-date{
+        font-size: clamp(12px, 2.32vw, 16px);
+        font-weight: 400;
+        line-height: clamp(25px, 2.58vw, 31px);
+        text-align: left;
+        color: #8D8D8D;
+    }
+    .np-readpost{
+        font-size: clamp(14px, 2.32vw, 18px);
+        font-weight: 700;
+        line-height: clamp(25px, 2.58vw, 31px);
+        text-align: right;
+        color: var(--primary);
+    }
+    @media (max-width: 767px) {
+        padding: 30px 24px;
+        .np-img{margin-right: 0px;margin-bottom: 30px;}
+    }
+}
+
+.mycard{
+    border: 1px solid #EBDCFF;
+    background: $light-bg;
+    padding: 75px 90px;
+    border-radius: 15px;
+    margin-bottom: 50px;    
+    @media only screen and (max-width: 767px) and (min-width: 501px){
+        padding: 60px 30px;
+    }
+    @media (max-width: 500px) { 
+        padding: 45px 15px; 
+    }
+
+}
+
+.cmstitle{
+    font-size: clamp(20px, 2.32vw, 30px);
+    font-weight: 400;
+    line-height: clamp(30px, 4.04vw, 48.52px);
+    margin-bottom: 10px;
+}
+.cmstitlesub {
+    font-size: clamp(18px, 3.53vw, 24px);
+    margin-bottom: 26px;
+    line-height: normal;
+}
+.cmspara{        
+    font-size: clamp(15px, 1.6vw, 17px);
+    font-weight: 400;
+    line-height: clamp(25px, 2.58vw, 31px);
+    text-align: left;
+    margin-bottom: 40px;
+    p{
+        font-size: clamp(15px, 1.6vw, 17px);
+        font-weight: 400;
+        line-height: clamp(25px, 2.58vw, 31px);
+        text-align: left;
+        margin-bottom: 25px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
